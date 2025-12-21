@@ -37,18 +37,29 @@
     </nav>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="greeting">Hello, I'm</span>
+                <span class="greeting">Building AI-powered risk management for 100M+ Indian retail investors.</span>
                 <h1 class="name">Tanmay Sahare</h1>
-                <h2 class="title">Aerospace Engineer & <span class="highlight">Data Analyst</span></h2>
-                <p class="tagline">Third Year B.Tech Student at IIT Kanpur. <br>Bridging the gap between Engineering,
-                    Data Science, and Public Policy.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                <h2 class="title">Aerospace Engineering @ IIT Kanpur · Data & Quant · Founder of <span
+                        class="highlight">CORE</span></h2>
+
+                <div class="hero-chips">
+                    <span class="chip"><i class="fas fa-university"></i> IIT Kanpur (3rd Year)</span>
+                    <span class="chip"><i class="fas fa-rocket"></i> Founder, CORE (Live MVP)</span>
+                    <span class="chip"><i class="fas fa-code-branch"></i> 3+ Shipped Projects</span>
+                    <span class="chip"><i class="fas fa-users"></i> 10k+ Reach</span>
                 </div>
+
+                <div class="hero-buttons">
+                    <a href="https://core.hedgeguard.in" target="_blank" class="btn btn-primary">Explore CORE</a>
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                    <a href="assets/resume.pdf" class="btn btn-text" download>Download Resume <i
+                            class="fas fa-download"></i></a>
+                </div>
+
                 <div class="social-links">
                     <a href="https://github.com/tanmaysahare" target="_blank" aria-label="GitHub"><i
                             class="fab fa-github"></i></a>
@@ -57,14 +68,79 @@
                     <a href="mailto:tanmayka23@iitk.ac.in" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
+            <!-- CORE Preview Visual (Placeholder) -->
             <div class="hero-visual">
-                <!-- Abstract visual or profile placeholder -->
                 <div class="blob-wrapper">
                     <div class="blob"></div>
                 </div>
             </div>
         </div>
-        <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+        <a href="#core-feature" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- DEDICATED CORE SECTION -->
+    <section id="core-feature" class="section core-section">
+        <div class="container">
+            <div class="core-grid">
+                <div class="core-text">
+                    <div class="core-header">
+                        <span class="core-label">FLAGSHIP PRODUCT</span>
+                        <h2>CORE <span style="font-weight: 400; font-size: 1.5rem;">Capital Optimization & Risk
+                                Engine</span></h2>
+                    </div>
+
+                    <div class="problem-solution">
+                        <div class="ps-item">
+                            <h4><i class="fas fa-exclamation-circle text-danger"></i> The Problem</h4>
+                            <p>Retail investors in India are mostly naked-long, and over 90% of F&O traders lose money.
+                                They lack affordable, automated risk defense.</p>
+                        </div>
+                        <div class="ps-item">
+                            <h4><i class="fas fa-check-circle text-success"></i> The Solution</h4>
+                            <p>CORE acts as an automated "Chief Risk Officer"—stress-testing portfolios against crashes
+                                and prescribing hedges in 3 clicks.</p>
+                        </div>
+                    </div>
+
+                    <ul class="core-features">
+                        <li><i class="fas fa-robot"></i> <strong>AI Risk Engine:</strong> VADER-based sentiment scanner
+                            adjusts hedge ratios live.</li>
+                        <li><i class="fas fa-history"></i> <strong>Crisis Replay:</strong> Simulates 2008 & 2020 crashes
+                            on user portfolios.</li>
+                        <li><i class="fas fa-shield-alt"></i> <strong>Zero-Cost Collar:</strong> Downside protection
+                            with zero net premium.</li>
+                        <li><i class="fas fa-chart-pie"></i> <strong>Portfolio DNA:</strong> Correlation &
+                            sector-concentration analysis.</li>
+                        <li><i class="fas fa-file-invoice-dollar"></i> <strong>Tax Scout:</strong> Algorithmic tax-loss
+                            harvesting execution.</li>
+                    </ul>
+
+                    <div class="project-tech core-tech">
+                        <li>Next.js</li>
+                        <li>FastAPI</li>
+                        <li>Python</li>
+                        <li>Black-Scholes</li>
+                        <li>VADER NLP</li>
+                        <li>PostgreSQL</li>
+                    </div>
+
+                    <div class="core-buttons">
+                        <a href="https://core.hedgeguard.in" target="_blank" class="btn btn-primary">Try Live Demo</a>
+                        <a href="#" onclick="alert('Pitch coming soon!')" class="btn btn-outline"
+                            style="border-color: rgba(255,255,255,0.3); color: inherit;">View Pitch / Details</a>
+                    </div>
+                </div>
+                <div class="core-visual-container">
+                    <!-- Placeholder for app screenshot/mockup -->
+                    <div class="core-mockup-placeholder">
+                        <i class="fas fa-chart-line"
+                            style="font-size: 4rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                        <p>Interactive Risk Dashboard</p>
+                        <span style="font-size: 0.8rem; opacity: 0.7;">(Live Visualization)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -73,13 +149,14 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am a Third Year <strong>Aerospace Engineering</strong> student at the <strong>Indian Institute
-                            of Technology (IIT) Kanpur</strong>, with a strong passion for Data Science and
-                        Computational Analysis. My academic journey combines rigorous engineering principles with modern
-                        data analytics.</p>
-                    <p>Currently based in <strong>Nagpur, Maharashtra</strong> and Kanpur, I enjoy solving complex
-                        problems—whether it's analyzing government policies, optimizing sports betting markets, or
-                        organizing large-scale chess tournaments.</p>
+                    <p>I’m a 3rd-year <strong>Aerospace Engineering</strong> student at <strong>IIT Kanpur</strong>
+                        working at the intersection of data, policy, and quantitative finance. I like building systems
+                        that turn noisy markets and elections into structured, actionable decisions.</p>
+                    <p>I’ve built <strong>TweetTracker</strong> (policy sentiment analysis), a real-time soccer betting
+                        alert engine, and <strong>CORE</strong> (an automated risk engine for retail investors). I also
+                        lead policy research and chess initiatives that reach 10k+ people.</p>
+                    <p>I’m looking for <strong>Data / Quant / Product</strong> roles and internships where I can work on
+                        real problems with measurable impact.</p>
 
                     <div class="info-grid">
                         <div class="info-item">
@@ -109,7 +186,7 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Education Section (Kept as is, just ensured clear flow) -->
     <section id="education" class="section bg-alt">
         <div class="container">
             <h2 class="section-title">Education</h2>
@@ -121,26 +198,10 @@
                         <h4>Indian Institute of Technology (IIT) Kanpur</h4>
                         <p class="grade">CPI: 6.4/10</p>
                         <p class="coursework"><strong>Relevant Coursework:</strong> Financial Economics, Ordinary
-                            Differential Equations, Linear Algebra, Complex Variables, Fundamentals of Computing,
-                            Introduction to Electronics.</p>
+                            Differential Equations, Linear Algebra, Fundamentals of Computing.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022</div>
-                    <div class="timeline-content">
-                        <h3>Senior Secondary (XII)</h3>
-                        <h4>Dr. Ambedkar College, Nagpur (State Board)</h4>
-                        <p class="grade">Percentage: 80.6%</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2020</div>
-                    <div class="timeline-content">
-                        <h3>Secondary (X)</h3>
-                        <h4>Bhavan's B.P. Vidya Mandir, Nagpur (CBSE)</h4>
-                        <p class="grade">Percentage: 95.4%</p>
-                    </div>
-                </div>
+                <!-- High School entries kept concise -->
             </div>
         </div>
     </section>
@@ -150,143 +211,137 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card">
+
+                <!-- Project 1: CORE (Compact) -->
+                <article class="project-card" style="border-left: 4px solid var(--accent-color);">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>TweetTracker - Sentiment Analysis</h3>
+                            <h3>CORE <span
+                                    style="font-size: 0.8rem; background: var(--accent-color); color: white; padding: 2px 6px; border-radius: 4px; margin-left: 8px;">Featured</span>
+                            </h3>
                             <span class="project-links">
-                                <a href="tweettracker/index.html" target="_blank" title="View Full Case Study"><i
+                                <a href="https://core.hedgeguard.in" target="_blank"><i
                                         class="fas fa-external-link-alt"></i></a>
-                                <a href="#" onclick="alert('Repo link coming soon!')"><i class="fab fa-github"></i></a>
                             </span>
                         </div>
-                        <p class="project-role">Lead Developer & Mentor | Public Policy and Opinion Cell</p>
-                        <p class="project-desc">Analyzed public sentiment on major Indian government policies through
-                            Twitter data using NLP. Mentored 15+ students through the complete data pipeline.</p>
+                        <p class="project-role">Fintech / Quant</p>
+                        <p class="project-desc">Automated "Chief Risk Officer" for retail investors. Features AI risk
+                            engine, crisis replay, and zero-cost collar strategies.</p>
                         <ul class="project-tech">
-                            <li>Python</li>
-                            <li>Tweepy</li>
-                            <li>NLTK</li>
-                            <li>Pandas</li>
-                            <li>VADER</li>
+                            <li>Next.js</li>
+                            <li>FastAPI</li>
+                            <li>Quant Libs</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- Project 2 -->
+                <!-- Project 2: Soccer Betting -->
                 <article class="project-card">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>Soccer Betting Insights AI</h3>
+                            <h3>Soccer Betting Insights</h3>
                             <span class="project-links">
                                 <a href="#" title="View Code"><i class="fab fa-github"></i></a>
                             </span>
                         </div>
-                        <p class="project-role">Self Project | Real-time Data Pipeline</p>
-                        <p class="project-desc">A real-time notification system to detect significant market movements
-                            (line drops) in soccer betting. Integrates bias filtering and Telegram alerts for risk
-                            mitigation.</p>
+                        <p class="project-role">Real-time Data Pipeline</p>
+                        <ul class="project-bullets"
+                            style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px;">
+                            <li>Built a real-time pipeline from BetsAPI/Bet365 to detect market inefficiencies.</li>
+                            <li>Detects soft/hard line drops, filtering out noise like goals/penalties.</li>
+                            <li><strong>Impact:</strong> Deployed alerts across 4 private Telegram channels.</li>
+                        </ul>
                         <ul class="project-tech">
                             <li>Python</li>
-                            <li>APIs</li>
                             <li>Telegram Bot</li>
                             <li>Data Analysis</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- Project 3: CORE -->
-                <article class="project-card" style="border-left: 5px solid #00B4D8;">
+                <!-- Project 3: TweetTracker -->
+                <article class="project-card">
                     <div class="project-content">
                         <div class="project-header">
-                            <div>
-                                <h3>CORE - Capital Optimization & Risk Engine</h3>
-                                <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 2px;">Live MVP |
-                                    Fintech & Wealth Tech</p>
-                            </div>
+                            <h3>TweetTracker</h3>
                             <span class="project-links">
-                                <a href="https://core.hedgeguard.in" target="_blank" title="Live Demo"><i
+                                <a href="tweettracker/index.html" target="_blank"><i
                                         class="fas fa-external-link-alt"></i></a>
-                                <a href="#" onclick="alert('Repo is private for IP reasons')" title="Private Repo"><i
-                                        class="fab fa-github"></i></a>
                             </span>
                         </div>
-                        <p class="project-role">Founder & Lead Developer</p>
-                        <p class="project-desc">
-                            <strong>The Automated "Chief Risk Officer" for Retail Investors.</strong><br>
-                            CORE bridges the gap between speculation and accumulation by democratizing
-                            institutional-grade risk management.
-                            <br><br>
-                            <em>Key Capabilities:</em>
-                        <ul
-                            style="list-style: disc; padding-left: 20px; margin-bottom: 15px; color: var(--text-light); font-size: 0.9rem;">
-                            <li><strong>AI Risk Engine:</strong> VADER Sentiment analysis adjusts hedge ratios in
-                                real-time.</li>
-                            <li><strong>Crisis Replay:</strong> Stress-test portfolios against 2008 & 2020 crashes.</li>
-                            <li><strong>Zero-Cost Collar:</strong> Downside protection with zero net premium.</li>
-                            <li><strong>Tax Scout:</strong> Algorithmic tax-loss harvesting execution.</li>
+                        <p class="project-role">NLP / Policy Research</p>
+                        <ul class="project-bullets"
+                            style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px;">
+                            <li>Collected tweets via Tweepy for major Indian government policies.</li>
+                            <li>Cleaned text with Regex/NLTK and classified sentiment using VADER.</li>
+                            <li><strong>Impact:</strong> Mentored 15+ students through the full data pipeline.</li>
                         </ul>
-                        <div
-                            style="background: var(--bg-alt-color); padding: 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 15px;">
-                            <strong>Try Live MVP:</strong> <a href="https://core.hedgeguard.in" target="_blank"
-                                style="text-decoration: underline; color: var(--primary-color);">core.hedgeguard.in</a>
-                        </div>
-                        </p>
                         <ul class="project-tech">
-                            <li>Next.js</li>
-                            <li>FastAPI</li>
-                            <li>Python</li>
-                            <li>Black-Scholes</li>
-                            <li>VADER NLP</li>
-                            <li>PostgreSQL</li>
+                            <li>NLP</li>
+                            <li>VADER</li>
+                            <li>Pandas</li>
                         </ul>
                     </div>
                 </article>
+
+                <!-- Project 4: Electoral (Smaller) -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Electoral Asymmetry</h3>
+                        </div>
+                        <p class="project-role">Policy Analysis</p>
+                        <p class="project-desc">Analyzed the paradox of high female voter turnout vs. low representation
+                            (13.9%) using 2024 election data.</p>
+                        <ul class="project-tech">
+                            <li>Data Viz</li>
+                            <li>Research</li>
+                        </ul>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section (Grouped) -->
     <section id="skills" class="section bg-alt">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-wrapper">
+
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3><i class="fas fa-brain"></i> Data & ML</h3>
                     <div class="skill-tags">
-                        <span>Python</span>
-                        <span>C</span>
-                        <span>C++</span>
-                        <span>SQL</span>
-                        <span>HTML</span>
-                        <span>LaTeX</span>
+                        <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
+                        <span>PyTorch</span><span>TensorFlow</span><span>NLTK</span><span>VADER</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Data & ML</h3>
+                    <h3><i class="fas fa-server"></i> Backend & Infra</h3>
                     <div class="skill-tags">
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Matplotlib</span>
-                        <span>Scikit-learn</span>
-                        <span>TensorFlow</span>
-                        <span>PyTorch</span>
-                        <span>NLTK</span>
-                        <span>Seaborn</span>
+                        <span>FastAPI</span><span>REST APIs</span><span>SQL (MySQL/Postgres)</span><span>Basic
+                            Deployment</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Tools & Software</h3>
+                    <h3><i class="fas fa-chart-line"></i> Quant & Finance</h3>
                     <div class="skill-tags">
-                        <span>MATLAB</span>
-                        <span>PowerBI</span>
-                        <span>MySQL</span>
-                        <span>Excel</span>
-                        <span>AutoCAD</span>
-                        <span>Git</span>
+                        <span>Black-Scholes-Merton</span><span>Portfolio Beta</span><span>Correlation Analysis</span>
+                        <span>Tax-Loss Harvesting</span>
                     </div>
                 </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend & Tools</h3>
+                    <div class="skill-tags">
+                        <span>Next.js</span><span>HTML/CSS</span><span>Git</span>
+                        <span>PowerBI</span><span>Excel</span><span>MATLAB</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -294,36 +349,32 @@
     <!-- Leadership Section -->
     <section id="leadership" class="section">
         <div class="container">
-            <h2 class="section-title">Positions of Responsibility</h2>
+            <h2 class="section-title">Leadership & Impact</h2>
             <div class="leadership-grid">
+
                 <div class="leadership-card">
                     <div class="card-header">
-                        <h3>Coordinator</h3>
-                        <span class="org">Chess Club, IIT Kanpur</span>
-                        <span class="date">Apr '25 - Present</span>
+                        <h3>Chess Club Coordinator</h3>
+                        <span class="org">IIT Kanpur</span>
                     </div>
                     <ul>
-                        <li>Organized <strong>CMPL</strong>, India's largest inter-collegiate chess tournament (6,000+
-                            participants).</li>
-                        <li>Managed a 2-tier team of 23+ student leaders.</li>
-                        <li>Grew social media presence to <strong>5,000+ followers</strong>.</li>
-                        <li>Built an active community of 800+ members.</li>
+                        <li>Organized <strong>CMPL</strong> (India's largest inter-collegiate chess tournament) with
+                            <strong>6,000+ participants</strong> and ₹9L+ prize pool.</li>
+                        <li>Led a team of 23+ student leaders and built a community of 800+ members.</li>
                     </ul>
                 </div>
+
                 <div class="leadership-card">
                     <div class="card-header">
                         <h3>Manager, Policy Research</h3>
-                        <span class="org">Public Policy and Opinion Cell</span>
-                        <span class="date">Apr '25 - Present</span>
+                        <span class="org">PPOC, IIT Kanpur</span>
                     </div>
                     <ul>
-                        <li>Led a team of 20+ secretaries for policy research.</li>
-                        <li>Organized <strong>Model United Nations</strong> at Policy Conclave '25 (10,000+ attendees).
-                        </li>
-                        <li>Secured sponsorships from Tata and Physics Wallah.</li>
-                        <li>Achieved <strong>400% increase</strong> in Instagram reach.</li>
+                        <li>Grew social reach by <strong>400%</strong> to 10k+ followers.</li>
+                        <li>Organized Policy Conclave '25 (10,000+ attendees) and secured sponsors like Tata.</li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
