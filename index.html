@@ -1,27 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanmay Sahare | Developer</title>
-    <style>
-        body { font-family: sans-serif; background-color: #f4f4f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; color: #18181b; }
-        .container { text-align: center; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); max-width: 400px; width: 90%; }
-        .photo { width: 120px; height: 120px; border-radius: 50%; background-color: #e4e4e7; margin: 0 auto 20px; background-image: url('https://github.com/tanmaysahare.png'); background-size: cover; }
-        h1 { margin: 0 0 10px; font-size: 24px; }
-        p { color: #71717a; margin: 0 0 30px; }
-        .link-card { display: block; background: #fff; border: 1px solid #e4e4e7; padding: 15px; margin-bottom: 12px; border-radius: 8px; text-decoration: none; color: #18181b; font-weight: 500; transition: all 0.2s; }
-        .link-card:hover { background: #fafafa; border-color: #18181b; transform: translateY(-2px); }
-    </style>
+    <meta name="description"
+        content="Professional portfolio of Tanmay Sahare, Aerospace Engineering student at IIT Kanpur specializing in Data Science and Policy Research.">
+    <title>Tanmay Sahare | Aerospace Engineer & Data Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="photo"></div>
-        <h1>Tanmay Sahare</h1>
-        <p>Student Developer | Open Source Enthusiast</p>
-        <a href="https://github.com/tanmaysahare" class="link-card">GitHub</a>
-        <a href="https://linkedin.com/in/" class="link-card">LinkedIn</a>
-        <a href="mailto:contact@tanmaysahare.me" class="link-card">Email Me</a>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">TS.</a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+                <li><button id="themeToggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="name">Tanmay Sahare</h1>
+                <h2 class="title">Aerospace Engineer & <span class="highlight">Data Analyst</span></h2>
+                <p class="tagline">Third Year B.Tech Student at IIT Kanpur. <br>Bridging the gap between Engineering,
+                    Data Science, and Public Policy.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/tanmaysahare" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:tanmayka23@iitk.ac.in" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract visual or profile placeholder -->
+                <div class="blob-wrapper">
+                    <div class="blob"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a Third Year <strong>Aerospace Engineering</strong> student at the <strong>Indian Institute
+                            of Technology (IIT) Kanpur</strong>, with a strong passion for Data Science and
+                        Computational Analysis. My academic journey combines rigorous engineering principles with modern
+                        data analytics.</p>
+                    <p>Currently based in <strong>Nagpur, Maharashtra</strong> and Kanpur, I enjoy solving complex
+                        problems—whether it's analyzing government policies, optimizing sports betting markets, or
+                        organizing large-scale chess tournaments.</p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>IIT Kanpur (B.Tech)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nagpur / Kanpur, India</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>tanmayka23@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>B.Tech in Aerospace Engineering</h3>
+                        <h4>Indian Institute of Technology (IIT) Kanpur</h4>
+                        <p class="grade">CPI: 6.4/10</p>
+                        <p class="coursework"><strong>Relevant Coursework:</strong> Financial Economics, Ordinary
+                            Differential Equations, Linear Algebra, Complex Variables, Fundamentals of Computing,
+                            Introduction to Electronics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Senior Secondary (XII)</h3>
+                        <h4>Dr. Ambedkar College, Nagpur (State Board)</h4>
+                        <p class="grade">Percentage: 80.6%</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Secondary (X)</h3>
+                        <h4>Bhavan's B.P. Vidya Mandir, Nagpur (CBSE)</h4>
+                        <p class="grade">Percentage: 95.4%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>TweetTracker - Sentiment Analysis</h3>
+                            <span class="project-links">
+                                <a href="#" title="View Code" onclick="alert('Repo link coming soon!')"><i
+                                        class="fab fa-github"></i></a>
+                            </span>
+                        </div>
+                        <p class="project-role">Lead Developer & Mentor | Public Policy and Opinion Cell</p>
+                        <p class="project-desc">Analyzed public sentiment on major Indian government policies through
+                            Twitter data using NLP. Mentored 15+ students through the complete data pipeline.</p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Tweepy</li>
+                            <li>NLTK</li>
+                            <li>Pandas</li>
+                            <li>VADER</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Soccer Betting Insights AI</h3>
+                            <span class="project-links">
+                                <a href="#" title="View Code"><i class="fab fa-github"></i></a>
+                            </span>
+                        </div>
+                        <p class="project-role">Self Project | Real-time Data Pipeline</p>
+                        <p class="project-desc">A real-time notification system to detect significant market movements
+                            (line drops) in soccer betting. Integrates bias filtering and Telegram alerts for risk
+                            mitigation.</p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>APIs</li>
+                            <li>Telegram Bot</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 3: CORE -->
+                <article class="project-card" style="border-left: 5px solid #00B4D8;">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3>CORE - Capital Optimization & Risk Engine</h3>
+                                <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 2px;">Live MVP |
+                                    Fintech & Wealth Tech</p>
+                            </div>
+                            <span class="project-links">
+                                <a href="https://core.hedgeguard.in" target="_blank" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="#" onclick="alert('Repo is private for IP reasons')" title="Private Repo"><i
+                                        class="fab fa-github"></i></a>
+                            </span>
+                        </div>
+                        <p class="project-role">Founder & Lead Developer</p>
+                        <p class="project-desc">
+                            <strong>The Automated "Chief Risk Officer" for Retail Investors.</strong><br>
+                            CORE bridges the gap between speculation and accumulation by democratizing
+                            institutional-grade risk management.
+                            <br><br>
+                            <em>Key Capabilities:</em>
+                        <ul
+                            style="list-style: disc; padding-left: 20px; margin-bottom: 15px; color: var(--text-light); font-size: 0.9rem;">
+                            <li><strong>AI Risk Engine:</strong> VADER Sentiment analysis adjusts hedge ratios in
+                                real-time.</li>
+                            <li><strong>Crisis Replay:</strong> Stress-test portfolios against 2008 & 2020 crashes.</li>
+                            <li><strong>Zero-Cost Collar:</strong> Downside protection with zero net premium.</li>
+                            <li><strong>Tax Scout:</strong> Algorithmic tax-loss harvesting execution.</li>
+                        </ul>
+                        <div
+                            style="background: var(--bg-alt-color); padding: 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 15px;">
+                            <strong>Try Live MVP:</strong> <a href="https://core.hedgeguard.in" target="_blank"
+                                style="text-decoration: underline; color: var(--primary-color);">core.hedgeguard.in</a>
+                        </div>
+                        </p>
+                        <ul class="project-tech">
+                            <li>Next.js</li>
+                            <li>FastAPI</li>
+                            <li>Python</li>
+                            <li>Black-Scholes</li>
+                            <li>VADER NLP</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>SQL</span>
+                        <span>HTML</span>
+                        <span>LaTeX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & ML</h3>
+                    <div class="skill-tags">
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Scikit-learn</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>NLTK</span>
+                        <span>Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Software</h3>
+                    <div class="skill-tags">
+                        <span>MATLAB</span>
+                        <span>PowerBI</span>
+                        <span>MySQL</span>
+                        <span>Excel</span>
+                        <span>AutoCAD</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section">
+        <div class="container">
+            <h2 class="section-title">Positions of Responsibility</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <div class="card-header">
+                        <h3>Coordinator</h3>
+                        <span class="org">Chess Club, IIT Kanpur</span>
+                        <span class="date">Apr '25 - Present</span>
+                    </div>
+                    <ul>
+                        <li>Organized <strong>CMPL</strong>, India's largest inter-collegiate chess tournament (6,000+
+                            participants).</li>
+                        <li>Managed a 2-tier team of 23+ student leaders.</li>
+                        <li>Grew social media presence to <strong>5,000+ followers</strong>.</li>
+                        <li>Built an active community of 800+ members.</li>
+                    </ul>
+                </div>
+                <div class="leadership-card">
+                    <div class="card-header">
+                        <h3>Manager, Policy Research</h3>
+                        <span class="org">Public Policy and Opinion Cell</span>
+                        <span class="date">Apr '25 - Present</span>
+                    </div>
+                    <ul>
+                        <li>Led a team of 20+ secretaries for policy research.</li>
+                        <li>Organized <strong>Model United Nations</strong> at Policy Conclave '25 (10,000+ attendees).
+                        </li>
+                        <li>Secured sponsorships from Tata and Physics Wallah.</li>
+                        <li>Achieved <strong>400% increase</strong> in Instagram reach.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-pattern">
+        <div class="container contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Feel free to reach out for collaborations or opportunities.</p>
+
+            <div class="contact-cards">
+                <a href="mailto:tanmayka23@iitk.ac.in" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>tanmayka23@iitk.ac.in</p>
+                </a>
+                <a href="tel:+918668840167" class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+91 86688 40167</p>
+                </a>
+            </div>
+
+            <div class="action-buttons">
+                <a href="https://linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" class="btn btn-primary"><i
+                        class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+                <a href="assets/resume.pdf" class="btn btn-outline" download><i class="fas fa-download"></i> Download
+                    Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Tanmay Sahare. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/tanmaysahare" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
