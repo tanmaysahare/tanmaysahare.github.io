@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TweetTracker | Agnipath Sentiment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #1DA1F2;
+            /* Twitter Blue */
+            --dark: #14171A;
+            --light: #F5F8FA;
+            --gray: #657786;
+            --success: #17BF63;
+            --danger: #E0245E;
+            --warning: #FFAD1F;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #AAB8C2 0%, #FFFFFF 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        /* Pipeline Card */
+        .pipeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .pipeline-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pipeline-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pipeline-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Charts Area */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        /* Tweets Grid */
+        .tweets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .tweet-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gray);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .tweet-card.positive {
+            border-left-color: var(--success);
+        }
+
+        .tweet-card.negative {
+            border-left-color: var(--danger);
+        }
+
+        .tweet-card.neutral {
+            border-left-color: var(--warning);
+        }
+
+        .tweet-sentiment {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .text-positive {
+            color: var(--success);
+        }
+
+        .text-negative {
+            color: var(--danger);
+        }
+
+        .text-neutral {
+            color: var(--warning);
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin-top: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            color: var(--gray);
+        }
+
+        img.wordcloud {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">TweetTracker</a>
+            <a href="/" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Public Sentiment on Agnipath</h1>
+            <p>An NLP-driven case study analyzing Twitter reactions to the Agnipath government scheme.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Tweepy API</span>
+                <span class="tech-badge">VADER Sentiment</span>
+                <span class="tech-badge">TextBlob</span>
+                <span class="tech-badge">Pandas</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container section">
+        <h2 class="section-title">Analysis Pipeline</h2>
+        <div class="pipeline-grid">
+            <div class="pipeline-card">
+                <div class="pipeline-icon">📡</div>
+                <h3>Data Extraction</h3>
+                <p>Fetched 50+ real-time tweets using <strong>Tweepy API</strong> based on hashtags like
+                    #AgnipathScheme.</p>
+            </div>
+            <div class="pipeline-card">
+                <div class="pipeline-icon">🧹</div>
+                <h3>Preprocessing</h3>
+                <p>Cleaned text using <strong>Regex</strong> & <strong>NLTK</strong> to remove noise, links, mentions,
+                    and stopwords.</p>
+            </div>
+            <div class="pipeline-card">
+                <div class="pipeline-icon">🧠</div>
+                <h3>Modeling</h3>
+                <p>Applied <strong>VADER</strong> (Rule-based) and <strong>TextBlob</strong> (Lexicon-based) models to
+                    classify sentiment.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2 class="section-title">Key Insights & Visualization</h2>
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>VADER Sentiment Distribution</h3>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">VADER identified a higher
+                    percentage of negative sentiment compared to TextBlob.</p>
+                <div class="chart-container">
+                    <canvas id="vaderChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>Topic Word Cloud</h3>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">Most frequent terms appearing in
+                    the analyzed tweets.</p>
+                <img src="assets/wordcloud.png" alt="Word Cloud" class="wordcloud">
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2 class="section-title">Sample Classification</h2>
+        <div class="tweets-container">
+            <!-- Positive -->
+            <div class="tweet-card positive">
+                <span class="tweet-sentiment text-positive">Positive (VADER)</span>
+                <p>"smart city surat engine bjp government in surat..."</p>
+            </div>
+            <div class="tweet-card positive">
+                <span class="tweet-sentiment text-positive">Positive (VADER)</span>
+                <p>"plz major sahab dont have any idea after agnipa..."</p>
+            </div>
+
+            <!-- Negative -->
+            <div class="tweet-card negative">
+                <span class="tweet-sentiment text-negative">Negative (VADER)</span>
+                <p>"nepal stopped recruitment since india announced..."</p>
+            </div>
+            <div class="tweet-card negative">
+                <span class="tweet-sentiment text-negative">Negative (VADER)</span>
+                <p>"congressinsults patriotsshivajisavarkararmedfor..."</p>
+            </div>
+
+            <!-- Neutral -->
+            <div class="tweet-card neutral">
+                <span class="tweet-sentiment text-neutral">Neutral (VADER)</span>
+                <p>"Detailed breakdown of the new recruitment policy criteria..."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2 class="section-title">Conflict Analysis</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto; margin-bottom: 30px;">
+            Different models perceive sentiment differently. We compared TextBlob and VADER on the same dataset.
+        </p>
+        <div
+            style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 10px;">56%</h3>
+            <p>Match Rate between TextBlob and VADER</p>
+            <p style="font-size: 0.9rem; color: var(--gray); margin-top: 10px;">22 tweets had conflicting labels out of
+                50.</p>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2 class="section-title">Live Code Snippet</h2>
+        <div class="code-block">
+            # fetching tweets
+            q = '#AgnipathScheme -filter:retweets'
+            tweets = client.search_recent_tweets(query=q, tweet_fields=['created_at', 'author_id'], max_results=50)
+
+            # cleaning function
+            def clean_tweet(text):
+            text = re.sub(r'@[A-Za-z0-9]+', '', text) # remove mentions
+            text = re.sub(r'#', '', text) # remove hashtags
+            text = re.sub(r'RT[\s]+', '', text) # remove RT
+            return text
+
+            # applying vader
+            analyzer = SentimentIntensityAnalyzer()
+            df['vader_score'] = df['text'].apply(lambda x: analyzer.polarity_scores(x)['compound'])
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/tanmaysahare/tweettracker-public-sentiment" class="back-link"
+                style="justify-content: center; color: var(--primary);">View Full Repository on GitHub →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tanmay Sahare. Built for Portfolio Showcase.</p>
+    </footer>
+
+    <script>
+        // VADER Sentiment Data
+        const ctx = document.getElementById('vaderChart').getContext('2d');
+        const vaderChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Positive', 'Neutral', 'Negative'],
+                datasets: [{
+                    data: [24, 18, 8],
+                    backgroundColor: [
+                        '#17BF63', // Green
+                        '#FFAD1F', // Orange/Yellow
+                        '#E0245E'  // Red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
