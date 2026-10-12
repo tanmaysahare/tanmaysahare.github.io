@@ -1,12 +1,19 @@
 # Tanmay Sahare
 
-> Founder of VarshaKrishi Udhyog Pvt. Ltd. — building affordable agricultural intelligence for Indian smallholder farmers. B.Tech Aerospace Engineering student at IIT Kanpur; startup incubated at SIIC IIT Kanpur.
+> Founder of VarshaKrishi Udhyog Pvt. Ltd.: satellite crop advice for Indian smallholder farmers, delivered weekly in the farmer's language on WhatsApp. B.Tech Aerospace Engineering student at IIT Kanpur; EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.
 
 ## Who
-Tanmay Sahare is an Indian engineer and founder. He builds offline-first, solar-powered LoRa IoT sensor networks and satellite-based crop advisory systems (Sentinel-2 / NASA HLS imagery, NDVI/NDRE/EVI/NDWI) that deliver plain-language advisories to farmers in 8 Indian languages. His platforms use literature-cited agronomy models (FAO-56 evapotranspiration for irrigation, TOMCAST DSV for disease risk) and seal every derived record in per-field SHA-256 hash chains for tamper-evident field history.
+Tanmay Sahare is an Indian engineer and founder. VarshaKrishi builds one product: satellite crop advice for Indian farmers, delivered weekly in the farmer's language on WhatsApp. Watch is free and national; Decide is crop-specific, reviewed by agronomists, and proven one crop and one belt at a time, starting with citrus in Vidarbha. The product reads free satellite imagery (Sentinel-2, NASA HLS, Sentinel-1) and weather, and every message carries its source, its observation date and its limits. Advice is reviewed in Marathi and Hindi; other languages are machine-translated and labelled. Agronomy engines are built from cited literature (FAO-56 evapotranspiration, TOMCAST disease severity values).
+
+## Company facts
+- VarshaKrishi Udhyog Private Limited, incorporated 5 March 2026, CIN U01113UW2026PTC250001, DPIIT-recognised (DIPP255998).
+- EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.
+- Patent application published August 2026 (priority June 2026).
+- First competitive tender awarded April 2026; the project did not proceed. No farmer cohort or site is claimed yet.
+- Hardware: the company does not build sensors; it procures reference kits only where a contract names them.
 
 ## Work
-- VarshaKrishi (flagship): https://www.varshakrishi.com — agricultural intelligence infrastructure (IoT + satellite advisory)
+- VarshaKrishi (flagship): https://www.varshakrishi.com (farmers: https://www.varshakrishi.com/kisan/ · partners: https://www.varshakrishi.com/partners · methods and limits: https://www.varshakrishi.com/methods)
 - CORE: automated portfolio risk engine for retail investors (fintech/quant)
 - TweetTracker: NLP sentiment analysis of Indian policy discourse
 - Leadership: Chess Club Coordinator IIT Kanpur (6,000+ participant tournament); Manager, Policy Research (PPOC IIT Kanpur)
