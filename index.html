@@ -1,68 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en-IN" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanmay Sahare, founder of VarshaKrishi | Satellite crop advice for Indian farmers</title>
     <meta name="description"
-        content="Tanmay Sahare is the founder of VarshaKrishi: satellite crop advice for Indian smallholder farmers, delivered weekly in the farmer's language on WhatsApp. B.Tech Aerospace Engineering student at IIT Kanpur; EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.">
+        content="Tanmay Sahare is the founder of VarshaKrishi: weekly satellite crop advice for a farmer's own field on WhatsApp, in Marathi, Hindi and English. EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.">
     <link rel="canonical" href="https://tanmaysahare.me/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Tanmay Sahare">
+    <meta name="theme-color" content="#F8FAFB" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1B262C" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Apply the saved theme before first paint, so dark-mode visitors do not see a light flash. -->
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) { }</script>
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Tanmay Sahare — Founder, VarshaKrishi">
+    <meta property="og:title" content="Tanmay Sahare, founder of VarshaKrishi">
     <meta property="og:description"
-        content="Satellite crop advice for Indian smallholder farmers, weekly, in the farmer's language, on WhatsApp. IIT Kanpur · EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.">
+        content="Weekly satellite crop advice for a farmer's own field, on WhatsApp, in Marathi, Hindi and English. EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.">
     <meta property="og:url" content="https://tanmaysahare.me/">
     <meta property="og:image" content="https://tanmaysahare.me/assets/profile.jpg">
+    <meta property="og:image:width" content="956">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Portrait of Tanmay Sahare, founder of VarshaKrishi">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Tanmay Sahare">
+    <meta property="profile:first_name" content="Tanmay">
+    <meta property="profile:last_name" content="Sahare">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Tanmay Sahare — Founder, VarshaKrishi">
+    <meta name="twitter:title" content="Tanmay Sahare, founder of VarshaKrishi">
     <meta name="twitter:description"
-        content="Building affordable agricultural intelligence for Indian smallholder farmers: offline-first solar IoT, satellite crop advisory, and AI.">
+        content="Weekly satellite crop advice for a farmer's own field, on WhatsApp, in Marathi, Hindi and English. EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.">
     <meta name="twitter:image" content="https://tanmaysahare.me/assets/profile.jpg">
+    <meta name="twitter:image:alt" content="Portrait of Tanmay Sahare, founder of VarshaKrishi">
 
-    <!-- Person + WebSite JSON-LD -->
+    <!-- ProfilePage + Person + Organization + WebSite JSON-LD.
+         The Organization node reuses the @id, name and legalName published on www.varshakrishi.com,
+         so search engines and AI assistants merge both sites into one entity. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "ProfilePage",
+          "@id": "https://tanmaysahare.me/#profilepage",
+          "url": "https://tanmaysahare.me/",
+          "name": "Tanmay Sahare, founder of VarshaKrishi",
+          "inLanguage": "en-IN",
+          "dateModified": "2026-10-17",
+          "isPartOf": { "@id": "https://tanmaysahare.me/#website" },
+          "mainEntity": { "@id": "https://tanmaysahare.me/#person" }
+        },
+        {
           "@type": "Person",
           "@id": "https://tanmaysahare.me/#person",
           "name": "Tanmay Sahare",
+          "givenName": "Tanmay",
+          "familyName": "Sahare",
           "url": "https://tanmaysahare.me/",
           "image": "https://tanmaysahare.me/assets/profile.jpg",
           "jobTitle": "Founder",
           "worksFor": { "@id": "https://www.varshakrishi.com/#organization" },
-          "description": "Founder of VarshaKrishi: satellite crop advice for Indian smallholder farmers, delivered weekly in the farmer's language on WhatsApp. B.Tech Aerospace Engineering student at IIT Kanpur; EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur.",
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Indian Institute of Technology Kanpur",
-            "sameAs": "https://www.iitk.ac.in/"
+          "description": "Tanmay Sahare is the founder of VarshaKrishi, which sends Indian farmers weekly satellite crop advice about their own field on WhatsApp, in Marathi, Hindi and English. He is an EiR Fellow at the 5G/6G Centre of Excellence, FIRST, IIT Kanpur, and a B.Tech Aerospace Engineering student at IIT Kanpur.",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "5G/6G Centre of Excellence, FIRST, IIT Kanpur",
+            "parentOrganization": { "@id": "https://tanmaysahare.me/#iitk" }
           },
-          "knowsAbout": ["Precision Agriculture", "Satellite Remote Sensing", "Crop Advisory", "NDVI crop monitoring", "Agronomy (FAO-56, TOMCAST)", "Machine Learning", "Quantitative Finance", "FastAPI"],
+          "alumniOf": { "@id": "https://tanmaysahare.me/#iitk" },
+          "knowsAbout": ["Satellite remote sensing", "Crop advisory", "Precision agriculture", "NDVI crop monitoring", "Agronomy (FAO-56, TOMCAST)", "Machine learning", "Quantitative finance", "FastAPI"],
           "nationality": { "@type": "Country", "name": "India" },
+          "homeLocation": { "@type": "Place", "name": "Nagpur, Maharashtra, India" },
           "email": "mailto:tanmayka23@iitk.ac.in",
           "sameAs": [
-            "https://github.com/tanmaysahare",
             "https://www.linkedin.com/in/tanmay-sahare-9a361329a/",
-            "https://www.varshakrishi.com/"
+            "https://github.com/tanmaysahare"
           ]
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "@id": "https://tanmaysahare.me/#iitk",
+          "name": "Indian Institute of Technology Kanpur",
+          "url": "https://www.iitk.ac.in/"
         },
         {
           "@type": "Organization",
           "@id": "https://www.varshakrishi.com/#organization",
-          "name": "VarshaKrishi Udhyog Private Limited",
+          "name": "VarshaKrishi",
+          "legalName": "VarshaKrishi Udhyog Private Limited",
           "url": "https://www.varshakrishi.com/",
+          "logo": "https://www.varshakrishi.com/assets/images/logo/favicon-512.png",
+          "slogan": "Weekly satellite crop advice for your own field, on WhatsApp, in Marathi, Hindi and English.",
+          "description": "VarshaKrishi sends Indian farmers one WhatsApp message a week about their own field: what changed, what to check and when to act. Built from Sentinel-2, Sentinel-1 and NASA HLS satellite data and the weather. Free for every farmer in India; crop-specific advice starts with Nagpur orange in Vidarbha.",
           "founder": { "@id": "https://tanmaysahare.me/#person" },
-          "description": "Satellite crop advice for Indian farmers, delivered weekly in the farmer's language on WhatsApp. Two tiers: Watch (free, national) and Decide (crop-specific, agronomist-reviewed)."
+          "sameAs": ["https://www.linkedin.com/company/varshakrishi"]
         },
         {
           "@type": "WebSite",
@@ -80,48 +117,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome icons are decorative (every icon-only link has an aria-label), so the
+         stylesheet loads without blocking the first paint. -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">TS.</a>
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#varshakrishi">VarshaKrishi</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Journey</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#leadership">Leadership</a></li>
-                <li><a href="#contact" class="btn-nav">Contact</a></li>
-                <li><button id="themeToggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button></li>
-            </ul>
-        </div>
-    </nav>
+    <a href="#main" class="skip-link">Skip to content</a>
 
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar" aria-label="Main">
+            <div class="container nav-container">
+                <a href="#hero" class="logo" aria-label="Tanmay Sahare, back to top">TS.</a>
+                <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="navLinks">
+                    <i aria-hidden="true" class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#varshakrishi">VarshaKrishi</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Journey</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#contact" class="btn-nav">Contact</a></li>
+                    <li><button type="button" id="themeToggle" aria-label="Dark mode" aria-pressed="false"><i
+                                aria-hidden="true" class="fas fa-moon"></i></button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="greeting">Building affordable agricultural intelligence for Indian smallholder
-                    farmers.</span>
+                <span class="greeting">Affordable technology for Indian smallholder farmers.</span>
                 <h1 class="name">Tanmay Sahare</h1>
-                <h2 class="title">Founder of VarshaKrishi. Satellite crop advice for Indian farmers, weekly, in their
-                    language, on WhatsApp.</h2>
+                <p class="title">Founder of VarshaKrishi: weekly satellite crop advice for a farmer's own field, on
+                    WhatsApp, in Marathi, Hindi and English.</p>
 
                 <div class="hero-chips">
-                    <span class="chip"><i class="fas fa-seedling"></i> Founder, VarshaKrishi Udhyog</span>
-                    <span class="chip"><i class="fas fa-university"></i> IIT Kanpur</span>
-                    <span class="chip"><i class="fas fa-flask"></i> EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur</span>
+                    <span class="chip"><i aria-hidden="true" class="fas fa-seedling"></i> Founder, VarshaKrishi Udhyog Pvt. Ltd.</span>
+                    <span class="chip"><i aria-hidden="true" class="fas fa-university"></i> B.Tech Aerospace, IIT Kanpur</span>
+                    <span class="chip"><i aria-hidden="true" class="fas fa-flask"></i> EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur</span>
                 </div>
 
                 <!-- Hero Stats Row -->
@@ -132,8 +180,8 @@
                     </div>
                     <div class="stat-splitter"></div>
                     <div class="stat-item">
-                        <span class="stat-val">2</span>
-                        <span class="stat-label">Reviewed languages (Marathi, Hindi)</span>
+                        <span class="stat-val">3</span>
+                        <span class="stat-label">Languages (Marathi, Hindi, English)</span>
                     </div>
                     <div class="stat-splitter"></div>
                     <div class="stat-item">
@@ -143,30 +191,34 @@
                 </div>
 
                 <div class="hero-buttons">
-                    <a href="https://www.varshakrishi.com" target="_blank" rel="noopener" class="btn btn-primary">Explore
-                        VarshaKrishi <i class="fas fa-arrow-right"
+                    <a href="https://www.varshakrishi.com/" rel="noopener" class="btn btn-primary">Visit
+                        www.varshakrishi.com <i aria-hidden="true" class="fas fa-arrow-right"
                             style="margin-left: 6px; font-size: 0.9em; transition: transform 0.2s;"></i></a>
-                    <a href="#projects" class="btn btn-outline">View Projects</a>
-                    <a href="assets/resume.pdf" class="btn btn-text" download>Download Resume <i
+                    <a href="#projects" class="btn btn-outline">View projects</a>
+                    <a href="assets/resume.pdf" class="btn btn-text" download>Download resume (PDF) <i aria-hidden="true"
                             class="fas fa-download"></i></a>
                 </div>
 
                 <div class="social-links">
-                    <a href="https://github.com/tanmaysahare" target="_blank" rel="noopener" aria-label="GitHub"><i
+                    <a href="https://github.com/tanmaysahare" target="_blank" rel="noopener me" aria-label="GitHub"><i aria-hidden="true"
                             class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:tanmayka23@iitk.ac.in" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener me"
+                        aria-label="LinkedIn"><i aria-hidden="true" class="fab fa-linkedin"></i></a>
+                    <a href="mailto:tanmayka23@iitk.ac.in" aria-label="Email"><i aria-hidden="true" class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="profile-container">
                     <div class="blob-bg"></div>
-                    <img src="assets/profile.jpg" alt="Tanmay Sahare, founder of VarshaKrishi" class="profile-img">
+                    <picture>
+                        <source srcset="assets/profile-480.webp" type="image/webp">
+                        <img src="assets/profile.jpg" alt="Tanmay Sahare, founder of VarshaKrishi" class="profile-img"
+                            width="300" height="300" fetchpriority="high" decoding="async">
+                    </picture>
                 </div>
             </div>
         </div>
-        <a href="#varshakrishi" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+        <a href="#varshakrishi" class="scroll-down" aria-label="Scroll to VarshaKrishi"><i aria-hidden="true" class="fas fa-chevron-down"></i></a>
     </section>
 
     <!-- FLAGSHIP: VARSHAKRISHI -->
@@ -175,19 +227,19 @@
             <div class="core-grid">
                 <div class="core-text">
                     <div class="core-header">
-                        <span class="core-label">FLAGSHIP — WHAT I'M BUILDING</span>
-                        <h2>VarshaKrishi <span style="font-weight: 400; font-size: 1.5rem;">Agricultural Intelligence
-                                Infrastructure</span></h2>
+                        <span class="core-label">FLAGSHIP: WHAT I'M BUILDING</span>
+                        <h2>VarshaKrishi <span style="font-weight: 400; font-size: 1.5rem;">Weekly satellite crop
+                                advice</span></h2>
                     </div>
 
                     <div class="problem-solution">
                         <div class="ps-item">
-                            <h4><i class="fas fa-exclamation-circle text-danger"></i> The Problem</h4>
+                            <h3 class="h4"><i aria-hidden="true" class="fas fa-exclamation-circle text-danger"></i> The problem</h3>
                             <p>Most Indian smallholder farmers decide when to irrigate and what to check by habit, because no one
                                 looks at their individual field every week.</p>
                         </div>
                         <div class="ps-item">
-                            <h4><i class="fas fa-check-circle text-success"></i> The Approach</h4>
+                            <h3 class="h4"><i aria-hidden="true" class="fas fa-check-circle text-success"></i> The approach</h3>
                             <p>Free satellite imagery (Sentinel-2, NASA HLS, Sentinel-1) and weather, turned into one honest
                                 message a week on WhatsApp, in the farmer's own language, with the source, the date
                                 and the limits of every signal stated.</p>
@@ -195,46 +247,47 @@
                     </div>
 
                     <ul class="core-features">
-                        <li><i class="fas fa-satellite"></i> <strong>Satellite crop advisory:</strong> NDVI/NDRE/EVI/NDWI
-                            per field, trend against a per-field baseline, delivered weekly on WhatsApp. Advice
-                            reviewed in Marathi and Hindi; other languages machine-translated and labelled.</li>
-                        <li><i class="fab fa-whatsapp"></i> <strong>Watch and Decide:</strong> Watch is free and national
-                            (trend, weather, honest "no reliable signal" states, no prescriptions). Decide is
-                            crop-specific and agronomist-reviewed, proven one belt at a time.</li>
-                        <li><i class="fas fa-link"></i> <strong>Provenance:</strong> every advisory shows its source, its
+                        <li><i aria-hidden="true" class="fas fa-satellite"></i> <strong>Satellite crop advice:</strong> NDVI/NDRE/EVI/NDWI
+                            per field, trend against the field's own history, delivered weekly on WhatsApp in Marathi,
+                            Hindi or English. Other Indian languages are machine-translated and labelled.</li>
+                        <li><i aria-hidden="true" class="fab fa-whatsapp"></i> <strong>Watch and Decide:</strong> Watch is free for any field
+                            in India (trend, weather, honest "no reliable signal" states, no prescriptions). Decide is
+                            crop-specific and agronomist-reviewed, starting with Nagpur orange in Vidarbha for the
+                            2026-27 season.</li>
+                        <li><i aria-hidden="true" class="fas fa-link"></i> <strong>Provenance:</strong> every message shows its source, its
                             observation date and its limits; derived records are hash-chained per field.</li>
-                        <li><i class="fas fa-tint"></i> <strong>Science-grade advisories:</strong> FAO-56
+                        <li><i aria-hidden="true" class="fas fa-tint"></i> <strong>Cited agronomy:</strong> FAO-56
                             evapotranspiration irrigation models and literature-cited disease-risk forecasting
                             (TOMCAST DSV).</li>
-                        <li><i class="fas fa-rupee-sign"></i> <strong>Who pays:</strong> farmers can buy a Decide season
-                            pass, partners can sponsor cohorts, programmes can pay per farmer-season. Watch stays
-                            free. No farmer price is published until a cohort has paid it.</li>
+                        <li><i aria-hidden="true" class="fas fa-rupee-sign"></i> <strong>Who pays:</strong> farmers can buy a Decide season
+                            pass, partners can sponsor farmer groups, programmes can pay per farmer-season. Watch stays
+                            free. No farmer price is published until a group has paid it.</li>
                     </ul>
 
-                    <div class="project-tech core-tech">
+                    <ul class="project-tech core-tech">
                         <li>FastAPI</li>
                         <li>WhatsApp</li>
                         <li>Sentinel-2</li>
-                        <li>React</li>
+                        <li>Next.js</li>
                         <li>React Native</li>
                         <li>PostgreSQL</li>
                         <li>AWS</li>
-                    </div>
+                    </ul>
 
                     <div class="core-buttons">
-                        <a href="https://www.varshakrishi.com" target="_blank" rel="noopener" class="btn btn-primary">Visit
-                            varshakrishi.com</a>
+                        <a href="https://www.varshakrishi.com/" rel="noopener" class="btn btn-primary">Visit
+                            www.varshakrishi.com</a>
                         <a href="https://www.varshakrishi.com/partners"
-                            class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: inherit;" target="_blank" rel="noopener">Sponsor
+                            class="btn btn-outline" style="border-color: rgba(255,255,255,0.5); color: inherit;" rel="noopener">Sponsor
                             a season</a>
                     </div>
                 </div>
                 <div class="core-visual-container">
                     <div class="core-mockup-placeholder">
-                        <i class="fas fa-seedling"
+                        <i aria-hidden="true" class="fas fa-seedling"
                             style="font-size: 4rem; color: var(--accent-color); margin-bottom: 20px;"></i>
-                        <p>Satellite crop advice for your field,<br>in your language, on WhatsApp.</p>
-                        <span style="font-size: 0.8rem; opacity: 0.7;">VarshaKrishi Udhyog Pvt. Ltd. · EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur</span>
+                        <p>Satellite crop advice for your own field,<br>in your language, on WhatsApp.</p>
+                        <span style="font-size: 0.8rem;">VarshaKrishi Udhyog Pvt. Ltd. · DPIIT-recognised (DIPP255998) · Nagpur, Maharashtra</span>
                     </div>
                 </div>
             </div>
@@ -244,53 +297,52 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">About me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm the founder of <strong>VarshaKrishi Udhyog Pvt. Ltd.</strong>, an <strong>EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur</strong>, and a <strong>B.Tech Aerospace Engineering</strong> student
-                        at <strong>IIT Kanpur</strong>. VarshaKrishi builds one product: satellite crop advice for Indian farmers, delivered weekly in the farmer's language on WhatsApp. Watch is free and national; Decide is crop-specific, reviewed by agronomists, and proven one crop and one belt at a time, starting with citrus in Vidarbha.</p>
-                    <p>VarshaKrishi is built from the farmer's question backwards: what changed on my field, and what should I check this week? The stack today is a
+                    <p>I'm the founder of <a href="https://www.varshakrishi.com/"><strong>VarshaKrishi</strong></a>, which sends Indian farmers weekly satellite crop advice about their own field on WhatsApp, in Marathi, Hindi and English. I'm an <strong>EiR Fellow at the 5G/6G Centre of Excellence, FIRST, IIT Kanpur</strong>, and a <strong>B.Tech Aerospace Engineering</strong> student at <strong>IIT Kanpur</strong>.</p>
+                    <p>VarshaKrishi builds one product with two tiers. Watch is free for any field in India; Decide is crop-specific, reviewed by agronomists, and proven one crop and one belt at a time, starting with Nagpur orange in Vidarbha for the 2026-27 season.</p>
+                    <p>It is built from the farmer's question backwards: what changed on my field, and what should I check this week? The stack today is a
                         satellite imagery pipeline on free data, FastAPI backends, a Next.js dashboard for partners,
                         WhatsApp delivery, and agronomy engines built from cited literature (FAO-56
-                        evapotranspiration, TOMCAST disease models), with every advisory carrying its source, date
+                        evapotranspiration, TOMCAST disease models), with every message carrying its source, date
                         and limits.</p>
-                    <p>Before agritech consumed me, I built quantitative and data systems: <strong>CORE</strong> (an
+                    <p>Before agritech, I built quantitative and data systems: <strong>CORE</strong> (an
                         automated portfolio risk engine), a real-time sports-market arbitrage monitor, and
-                        <strong>TweetTracker</strong> (NLP policy sentiment analysis). That toolkit — models, data
-                        pipelines, shipped products — is now pointed at Indian agriculture.</p>
+                        <strong>TweetTracker</strong> (NLP policy sentiment analysis). That toolkit of models, data
+                        pipelines and shipped products is now pointed at Indian agriculture.</p>
                     <p>I'm looking for <strong>pilot partners, research collaborations and grant partnerships</strong>
-                        (KVKs, FPOs, agricultural universities, NGOs) — and I'm always happy to talk engineering.</p>
+                        (KVKs, FPOs, agricultural universities, NGOs), and I'm always happy to talk engineering.</p>
 
-                    <a href="#projects" class="btn btn-outline small-cta" style="margin-top: 20px;">Explore My Work
-                        ↓</a>
+                    <a href="#projects" class="btn btn-outline small-cta" style="margin-top: 20px;">Explore my work</a>
 
                     <div class="info-grid">
                         <div class="info-item">
-                            <i class="fas fa-seedling"></i>
+                            <i aria-hidden="true" class="fas fa-seedling"></i>
                             <div>
-                                <h4>Founder</h4>
+                                <h3 class="h4">Founder</h3>
                                 <p>VarshaKrishi Udhyog Pvt. Ltd.</p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-university"></i>
+                            <i aria-hidden="true" class="fas fa-university"></i>
                             <div>
-                                <h4>Education</h4>
+                                <h3 class="h4">Education</h3>
                                 <p>IIT Kanpur (B.Tech Aerospace)</p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Location</h4>
+                                <h3 class="h4">Location</h3>
                                 <p>Kanpur / Nagpur, India</p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-envelope"></i>
+                            <i aria-hidden="true" class="fas fa-envelope"></i>
                             <div>
-                                <h4>Email</h4>
-                                <p>tanmayka23@iitk.ac.in</p>
+                                <h3 class="h4">Email</h3>
+                                <p><a href="mailto:tanmayka23@iitk.ac.in">tanmayka23@iitk.ac.in</a></p>
                             </div>
                         </div>
                     </div>
@@ -309,12 +361,12 @@
                     <div class="timeline-date">2025 - Present</div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Founder — VarshaKrishi Udhyog Pvt. Ltd.</h3>
-                        <h4>EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur</h4>
-                        <p class="coursework">Building satellite crop advice for Indian smallholder farmers, delivered
-                            weekly on WhatsApp. Incorporated 5 March 2026; DPIIT-recognised (DIPP255998); patent
+                        <h3>Founder, VarshaKrishi Udhyog Pvt. Ltd.</h3>
+                        <p class="h4">EiR Fellow, 5G/6G Centre of Excellence, FIRST, IIT Kanpur</p>
+                        <p class="coursework">Building weekly satellite crop advice for Indian smallholder farmers,
+                            delivered on WhatsApp. Incorporated 5 March 2026; DPIIT-recognised (DIPP255998); patent
                             application published August 2026. First competitive tender awarded in April 2026; the
-                            project did not proceed. First farmer cohort planned for the 2026-27 citrus season in
+                            project did not proceed. First farmer cohort planned for the 2026-27 Nagpur orange season in
                             Vidarbha.</p>
                     </div>
                 </div>
@@ -324,7 +376,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>B.Tech in Aerospace Engineering</h3>
-                        <h4>Indian Institute of Technology (IIT) Kanpur</h4>
+                        <p class="h4">Indian Institute of Technology (IIT) Kanpur</p>
                         <p class="coursework"><strong>Relevant coursework:</strong> Financial Economics, ODEs, Linear
                             Algebra, Complex Variables, Fundamentals of Computing.</p>
                     </div>
@@ -335,7 +387,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Class XII (Maharashtra Board)</h3>
-                        <h4>Dr. Ambedkar College, Nagpur</h4>
+                        <p class="h4">Dr. Ambedkar College, Nagpur</p>
                         <p class="grade">Percentage: 80.6%</p>
                         <p class="location-sub">Nagpur, Maharashtra, India</p>
                     </div>
@@ -346,7 +398,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Class X (CBSE)</h3>
-                        <h4>Bhavan's B.P. Vidya Mandir, Nagpur</h4>
+                        <p class="h4">Bhavan's B.P. Vidya Mandir, Nagpur</p>
                         <p class="grade">Percentage: 95.4%</p>
                         <p class="location-sub">Nagpur, Maharashtra, India</p>
                     </div>
@@ -359,86 +411,57 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Featured projects</h2>
             <div class="projects-grid">
 
-                <!-- Project 1: VarshaKrishi IoT -->
+                <!-- Project 1: VarshaKrishi (flagship) -->
                 <article class="project-card featured-card">
                     <div class="card-status status-featured">Flagship</div>
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>VarshaKrishi, satellite crop advisory</h3>
+                            <h3>VarshaKrishi, satellite crop advice</h3>
                             <span class="project-links">
-                                <a href="https://www.varshakrishi.com/methods" target="_blank" rel="noopener"
-                                    title="Product page"><i class="fas fa-external-link-alt"></i></a>
-                            </span>
-                        </div>
-                        <p class="project-role">Agritech / satellite advisory on WhatsApp</p>
-                        <ul class="project-bullets"
-                            style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px;">
-                            <li>Per-field vegetation and water indices from Sentinel-2 and NASA HLS, with a Sentinel-1
-                                fallback for the monsoon; honest states when there is no reliable signal.</li>
-                            <li>Weekly WhatsApp messages in the farmer's language; a partner dashboard and season report
-                                for sponsors; reference plots for research institutions.</li>
-                            <li>Irrigation advisory (FAO-56 ET₀ soil-water balance) and disease-risk forecasting
-                                (TOMCAST DSV) from cited agronomy literature.</li>
-                        </ul>
-                        <ul class="project-tech">
-                            <li>Sentinel-2</li>
-                            <li>FastAPI</li>
-                            <li>SQLAlchemy</li>
-                            <li>React</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                        <p class="last-updated">2025 – Present · Live</p>
-                    </div>
-                </article>
-
-                <!-- Project 2: Satellite Crop Advisory -->
-                <article class="project-card featured-card">
-                    <div class="card-status status-live">Live</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>VarshaKrishi — Satellite Crop Advisory</h3>
-                            <span class="project-links">
-                                <a href="https://www.varshakrishi.com" target="_blank" rel="noopener" title="Website"><i
+                                <a href="https://www.varshakrishi.com/" rel="noopener" aria-label="VarshaKrishi website"><i aria-hidden="true"
                                         class="fas fa-external-link-alt"></i></a>
                             </span>
                         </div>
-                        <p class="project-role">Remote Sensing / Geospatial AI</p>
+                        <p class="project-role">Agritech: per-field satellite advice on WhatsApp</p>
                         <ul class="project-bullets"
                             style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px;">
-                            <li>Ingests free Sentinel-2 + NASA HLS imagery; computes NDVI/NDRE/EVI/NDWI per farmer
-                                field with cloud masking.</li>
-                            <li>Detects crop-stress anomalies vs growth-stage baselines; delivers plain-language push
-                                advisories on WhatsApp in the farmer's language (Marathi and Hindi reviewed; six more locales machine-translated and labelled).</li>
-                            <li>Every derived record sealed in a per-field SHA-256 hash chain (append-only, DB-trigger
-                                enforced). Runs on AWS ECS Fargate.</li>
+                            <li>Per-field vegetation and water indices from Sentinel-2 and NASA HLS with cloud masking,
+                                and a Sentinel-1 radar fallback for the monsoon; honest states when there is no reliable
+                                signal.</li>
+                            <li>Weekly WhatsApp messages in Marathi, Hindi or English; a group dashboard and season
+                                report for sponsors; reference plots for research institutions.</li>
+                            <li>Irrigation advice (FAO-56 ET₀ soil-water balance) and disease-risk forecasting
+                                (TOMCAST DSV) from cited agronomy literature. Derived records are hash-chained per
+                                field.</li>
                         </ul>
                         <ul class="project-tech">
                             <li>Sentinel-2</li>
                             <li>rasterio</li>
+                            <li>FastAPI</li>
                             <li>Next.js</li>
-                            <li>Expo</li>
+                            <li>PostgreSQL</li>
                             <li>AWS</li>
                         </ul>
-                        <p class="last-updated">2025 – Present · Live on AWS</p>
+                        <p class="last-updated">2025 - Present · <a href="https://www.varshakrishi.com/methods" rel="noopener">Methods and limits</a></p>
                     </div>
                 </article>
 
-                <!-- Project 3: CORE -->
+                <!-- Project 2: CORE -->
                 <article class="project-card">
                     <div class="card-status status-live">Live</div>
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>CORE — Capital Optimization &amp; Risk Engine</h3>
+                            <h3>CORE: Capital Optimization &amp; Risk Engine</h3>
                             <span class="project-links">
-                                <a href="https://core.hedgeguard.in" target="_blank" rel="noopener" title="Live Demo"><i
+                                <a href="https://core.hedgeguard.in" target="_blank" rel="noopener" aria-label="CORE live demo"><i aria-hidden="true"
                                         class="fas fa-external-link-alt"></i></a>
                             </span>
                         </div>
                         <p class="project-role">Fintech / Quant</p>
-                        <p class="project-desc">Automated "Chief Risk Officer" for retail investors: AI risk engine with
+                        <p class="project-desc">Automated "Chief Risk Officer" for retail investors: a risk engine with
                             sentiment-adjusted hedge ratios, 2008/2020 crisis replay, zero-cost collar strategies and
                             tax-loss harvesting.</p>
                         <ul class="project-tech">
@@ -451,9 +474,9 @@
                     </div>
                 </article>
 
-                <!-- Project 4: Sports Arbitrage -->
+                <!-- Project 3: Sports Arbitrage -->
                 <article class="project-card">
-                    <div class="card-status status-live">Live</div>
+                    <div class="card-status status-completed">Built</div>
                     <div class="project-content">
                         <div class="project-header">
                             <h3>Sports Market Arbitrage Engine</h3>
@@ -470,17 +493,17 @@
                     </div>
                 </article>
 
-                <!-- Project 5: TweetTracker -->
+                <!-- Project 4: TweetTracker -->
                 <article class="project-card">
                     <div class="card-status status-completed">Completed</div>
                     <div class="project-content">
                         <div class="project-header">
                             <h3>TweetTracker</h3>
                             <span class="project-links">
-                                <a href="tweettracker/index.html" target="_blank" title="View Verification"><i
+                                <a href="tweettracker/index.html" aria-label="TweetTracker project page"><i aria-hidden="true"
                                         class="fas fa-external-link-alt"></i></a>
                                 <a href="https://github.com/tanmaysahare/tweettracker-public-sentiment" target="_blank"
-                                    rel="noopener" title="View on GitHub"><i class="fab fa-github"></i></a>
+                                    rel="noopener" aria-label="TweetTracker on GitHub"><i aria-hidden="true" class="fab fa-github"></i></a>
                             </span>
                         </div>
                         <p class="project-role">NLP / Policy Research</p>
@@ -495,7 +518,7 @@
                     </div>
                 </article>
 
-                <!-- Project 6: Electoral -->
+                <!-- Project 5: Electoral -->
                 <article class="project-card">
                     <div class="card-status status-research">Research</div>
                     <div class="project-content">
@@ -503,7 +526,7 @@
                             <h3>Electoral Asymmetry</h3>
                         </div>
                         <p class="project-role">Policy Analysis</p>
-                        <p class="project-desc">Analyzed the paradox of high female voter turnout vs. low representation
+                        <p class="project-desc">Analysed the paradox of high female voter turnout vs. low representation
                             (13.9%) using 2024 election data.</p>
                         <ul class="project-tech">
                             <li>Data Viz</li>
@@ -520,20 +543,20 @@
     <!-- Skills Section -->
     <section id="skills" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">Technical skills</h2>
             <div class="skills-wrapper">
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-satellite-dish"></i> Geospatial &amp; Agronomy</h3>
+                    <h3><i aria-hidden="true" class="fas fa-satellite-dish"></i> Geospatial &amp; Agronomy</h3>
                     <div class="skill-tags">
                         <span>Satellite remote sensing</span><span>Agronomy engines (FAO-56, TOMCAST)</span><span>WhatsApp delivery</span>
                         <span>Sentinel-2</span><span>NASA HLS</span><span>rasterio</span><span>shapely</span>
-                        <span>NDVI / Remote Sensing</span>
+                        <span>NDVI</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend &amp; Cloud</h3>
+                    <h3><i aria-hidden="true" class="fas fa-server"></i> Backend &amp; Cloud</h3>
                     <div class="skill-tags">
                         <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span>
                         <span>AWS (ECS, RDS, EventBridge)</span><span>Docker</span><span>Alembic</span>
@@ -541,15 +564,15 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend &amp; Mobile</h3>
+                    <h3><i aria-hidden="true" class="fas fa-laptop-code"></i> Frontend &amp; Mobile</h3>
                     <div class="skill-tags">
                         <span>React</span><span>Next.js</span><span>React Native (Expo)</span><span>TanStack
-                            Query</span><span>i18n (8 languages)</span><span>HTML/CSS</span>
+                            Query</span><span>i18n</span><span>HTML/CSS</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Data, ML &amp; Quant</h3>
+                    <h3><i aria-hidden="true" class="fas fa-brain"></i> Data, ML &amp; Quant</h3>
                     <div class="skill-tags">
                         <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>PyTorch</span>
                         <span>NLTK / VADER</span><span>Black-Scholes-Merton</span><span>Portfolio Analytics</span>
@@ -564,7 +587,7 @@
     <!-- Leadership Section -->
     <section id="leadership" class="section">
         <div class="container">
-            <h2 class="section-title">Leadership &amp; Impact</h2>
+            <h2 class="section-title">Leadership &amp; impact</h2>
             <div class="leadership-grid">
 
                 <div class="leadership-card">
@@ -573,8 +596,8 @@
                         <span class="org">IIT Kanpur</span>
                     </div>
                     <ul>
-                        <li><strong style="color: var(--accent-color);">6,000+ Participants:</strong> Organized CMPL,
-                            India's largest inter-collegiate chess tournament (>₹9L Prize Pool).</li>
+                        <li><strong style="color: var(--accent-color);">6,000+ participants:</strong> Organised CMPL,
+                            India's largest inter-collegiate chess tournament (>₹9L prize pool).</li>
                         <li>Built and sustained an active community of <strong>800+ members</strong>.</li>
                     </ul>
                 </div>
@@ -585,9 +608,9 @@
                         <span class="org">PPOC, IIT Kanpur</span>
                     </div>
                     <ul>
-                        <li><strong style="color: var(--accent-color);">400% Growth:</strong> Scaled social reach to
+                        <li><strong style="color: var(--accent-color);">400% growth:</strong> Scaled social reach to
                             10k+ followers.</li>
-                        <li>Organized <strong>Policy Conclave '25</strong> (10,000+ attendees), securing sponsors like
+                        <li>Organised <strong>Policy Conclave '25</strong> (10,000+ attendees), securing sponsors like
                             Tata and Physics Wallah.</li>
                     </ul>
                 </div>
@@ -597,20 +620,21 @@
     </section>
 
     <!-- Collaboration Banner -->
-    <section class="section" style="padding: 40px 0;">
+    <section class="section" style="padding: 40px 0;" aria-labelledby="work-together">
         <div class="container">
             <div class="opportunity-banner">
                 <div class="opp-content">
-                    <h3>Let's Work Together</h3>
-                    <p>Open to pilot partnerships (KVKs, FPOs, agricultural universities, NGOs, CSR programs), research
-                        collaborations, grant partnerships — and selective data/engineering internships.</p>
+                    <h2 id="work-together" class="h3">Let's work together</h2>
+                    <p>Open to pilot partnerships (KVKs, FPOs, agricultural universities, NGOs, CSR programmes),
+                        research collaborations and grant partnerships, and to selective data and engineering
+                        internships.</p>
                 </div>
                 <div class="opp-actions">
-                    <a href="mailto:tanmayka23@iitk.ac.in" class="btn btn-primary"><i class="fas fa-envelope"></i> Email
-                        Me</a>
-                    <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener"
-                        class="btn btn-outline"><i class="fab fa-linkedin"></i> Connect</a>
-                    <a href="assets/resume.pdf" class="btn btn-text" download>Download Resume</a>
+                    <a href="mailto:tanmayka23@iitk.ac.in" class="btn btn-primary"><i aria-hidden="true" class="fas fa-envelope"></i> Email
+                        me</a>
+                    <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener me"
+                        class="btn btn-outline"><i aria-hidden="true" class="fab fa-linkedin"></i> Connect</a>
+                    <a href="assets/resume.pdf" class="btn btn-text" download>Download resume (PDF)</a>
                 </div>
             </div>
         </div>
@@ -619,37 +643,38 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container text-center">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Get in touch</h2>
             <div class="contact-links">
-                <a href="mailto:tanmayka23@iitk.ac.in" class="contact-btn"><i class="fas fa-envelope"></i>
+                <a href="mailto:tanmayka23@iitk.ac.in" class="contact-btn"><i aria-hidden="true" class="fas fa-envelope"></i>
                     tanmayka23@iitk.ac.in</a>
-                <a href="https://www.varshakrishi.com" target="_blank" rel="noopener" class="contact-btn"><i
-                        class="fas fa-seedling"></i> varshakrishi.com</a>
-                <a href="https://github.com/tanmaysahare" target="_blank" rel="noopener" class="contact-btn"><i
+                <a href="https://www.varshakrishi.com/" rel="noopener" class="contact-btn"><i aria-hidden="true"
+                        class="fas fa-seedling"></i> www.varshakrishi.com</a>
+                <a href="https://github.com/tanmaysahare" target="_blank" rel="noopener me" class="contact-btn"><i aria-hidden="true"
                         class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener"
-                    class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener me"
+                    class="contact-btn"><i aria-hidden="true" class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
-            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">I typically respond within 24 hours.</p>
-            <p class="copyright">© 2026 Tanmay Sahare. Built with HTML, CSS &amp; Vanilla JS.</p>
+            <p class="contact-note">For VarshaKrishi (farmers, partners, press), write to
+                <a href="mailto:contact@varshakrishi.com">contact@varshakrishi.com</a>.</p>
         </div>
     </section>
+    </main>
 
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2026 Tanmay Sahare. All rights reserved.</p>
+            <p>&copy; 2026 Tanmay Sahare. Founder, <a href="https://www.varshakrishi.com/">VarshaKrishi</a>.</p>
             <div class="footer-social">
-                <a href="https://github.com/tanmaysahare" target="_blank" rel="noopener" aria-label="GitHub"><i
+                <a href="https://github.com/tanmaysahare" target="_blank" rel="noopener me" aria-label="GitHub"><i aria-hidden="true"
                         class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener"
-                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.varshakrishi.com" target="_blank" rel="noopener" aria-label="VarshaKrishi"><i
+                <a href="https://www.linkedin.com/in/tanmay-sahare-9a361329a/" target="_blank" rel="noopener me"
+                    aria-label="LinkedIn"><i aria-hidden="true" class="fab fa-linkedin"></i></a>
+                <a href="https://www.varshakrishi.com/" rel="noopener" aria-label="VarshaKrishi website"><i aria-hidden="true"
                         class="fas fa-seedling"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

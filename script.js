@@ -1,77 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggle
+    // Theme toggle. The saved theme is applied by an inline script in <head> before first paint;
+    // this only keeps the button's icon and pressed state in step with it.
     const themeToggle = document.getElementById('themeToggle');
     const htmlElement = document.documentElement;
     const icon = themeToggle.querySelector('i');
 
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    htmlElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-
-    function updateThemeIcon(theme) {
-        if (theme === 'dark') {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
+    function updateThemeToggle(theme) {
+        const dark = theme === 'dark';
+        icon.classList.toggle('fa-sun', dark);
+        icon.classList.toggle('fa-moon', !dark);
+        themeToggle.setAttribute('aria-pressed', String(dark));
     }
 
-    // Mobile Navigation Toggle
+    updateThemeToggle(htmlElement.getAttribute('data-theme'));
+
+    themeToggle.addEventListener('click', () => {
+        const newTheme = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        htmlElement.setAttribute('data-theme', newTheme);
+        try {
+            localStorage.setItem('theme', newTheme);
+        } catch (e) {
+            // Private mode or blocked storage: the theme still changes for this visit.
+        }
+        updateThemeToggle(newTheme);
+    });
+
+    // Mobile navigation toggle
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
+    function setMenu(open) {
+        navLinks.classList.toggle('active', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
     navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        setMenu(!navLinks.classList.contains('active'));
     });
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
+    // Close the mobile menu when a link is chosen or Escape is pressed
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenu(false));
     });
 
-    // Smooth Scrolling & Active Scroll Spy (Optional enhancement)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            setMenu(false);
+            navToggle.focus();
+        }
     });
 
-    // Intersection Observer for Animation on Scroll
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.section').forEach(section => {
-        // observer.observe(section);
-        // Note: 'fade-in' class needs to be defined in CSS if we enable this
-        // For now, only Hero has explicit animation, but we can add this later.
-    });
+    // In-page links scroll natively: CSS sets scroll-padding for the fixed navbar and smooth
+    // scrolling only when the visitor has not asked for reduced motion.
 });
